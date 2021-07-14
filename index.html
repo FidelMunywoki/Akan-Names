@@ -19,7 +19,7 @@
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a href="#learn" class="nav-link">What You'll Learn</a>
+                    <a href="#akan-names" class="nav-link">List of Akan names</a>
                 </li>
                 <li class="nav-item">
                    <a href="#questions" class="nav-link">Questions</a>
@@ -52,8 +52,64 @@
         </div>
     </section>
 
+    <!-- Modal -->
+<div class="modal fade" id="enroll" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+
+        <!-- collect user inputs -->
+        <form id="form" name="form" onsubmit="findDay()">
+          <legend>Fill in to generate your Akan name:
+              <hr>
+          </legend>
+          <div class="mb-3">
+            <label for="yearInput" class="form-label">Year Of Birth</label>
+            <input type="number" class="form-control" id="year" name="year" min="1900" max="2021" required placeholder="example : 1998">
+            <div  class="form-text">We'll never share your details with anyone else.</div>
+          </div>
+
+          <div class="mb-3">
+            <label for="monthInput" class="form-label">Month</label>
+            <input type="number" class="form-control" id="month" name="year" min="1" max="12" required placeholder="example :Jan=1, Dec=12">
+          </div>
+
+          <div class="mb-3">
+            <label for="dateInput" class="form-label">Date</label>
+            <input type="number" class="form-control" id="date" name="year" min="1" max="31" required placeholder="example : 16">
+          </div>
+
+          
+          <!-- Radio Buttons -->
+          <p>Select your gender: <br></p>
+          <div class="radio">
+              <label>
+                <input type="radio" name="gender" value="Female" checked>
+                Female
+              </label>
+          </div>
+          <div class="radio">
+              <label>
+                <input type="radio" name="gender" value="Male">
+                Male
+          </label>
+          </div>
+      </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Submit</button>
+      </div>
+    </div>
+  </div>
+</div>
+
     <!-- Akan names -->
-    <section class="p-5"> 
+    <section id="akan-names" class="p-5"> 
       <div class="container">
         <div class="row text-center">
           <h4>Akan Names Table</h4>
