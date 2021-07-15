@@ -1,0 +1,25 @@
+
+.blink{
+    
+    padding: 15px;	
+    text-align: center;
+    line-height: 50px;
+    
+   
+}
+p#post-akan-name{
+    font-size: 30px;
+    font-family: cursive;
+    color: white;
+    animation: blink 1s linear infinite;
+    font-weight: bold;
+}
+@keyframes blink{
+0%{opacity: .3;
+  color: black;}
+
+50%{opacity: .5;
+     color: blue;}
+100%{opacity: 1;
+  color: green;}
+}
