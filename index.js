@@ -16,7 +16,7 @@ function akanNames(y, m, d, g){
 
 
 
-// User interface (or front-end) logic:
+// getting user inputs:
 $(document).ready(function() {
     $("form#form").submit(function(event) {
         event.preventDefault();
@@ -26,7 +26,8 @@ $(document).ready(function() {
         var g = $("input:radio[name=gender]:checked").val();
         var result = akanNames(y, m, d, g);
          document.getElementById("post-akan-name").innerHTML="Your akan name is: " + result;
-         //
+
+         //confetti
         var duration = 15 * 1000;
         var animationEnd = Date.now() + duration;
         var defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 };
@@ -47,6 +48,7 @@ $(document).ready(function() {
         confetti(Object.assign({}, defaults, { particleCount, origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 } }));
         confetti(Object.assign({}, defaults, { particleCount, origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 } }));
         }, 250);
+
         //refresh page
         document.getElementById("form").reset();
     });
