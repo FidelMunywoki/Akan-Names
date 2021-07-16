@@ -53,6 +53,7 @@ $(document).ready(function() {
 
         //refresh page
         document.getElementById("form").reset();
+        return false;
     });
 });
 
