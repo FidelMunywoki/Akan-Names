@@ -52,8 +52,10 @@ $(document).ready(function() {
         }, 250);
 
         //refresh page
+      
         document.getElementById("form").reset();
         return false;
+      
     });
 });
 
