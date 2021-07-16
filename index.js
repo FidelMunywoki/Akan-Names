@@ -6,11 +6,12 @@ function akanNames(y, m, d, g){
     //Days counting ===>>>>["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
     var akanMale = ['Kwasi','Kwadwo','Kwabena','Kwaku','Yaw','Kofi','Kwame'];
     var akanFemale = ['Akosua', 'Adwoa','Abenaa','Akua','Yaa','Afua','Ama'];
+    var dayOfWeek = ['Sunday','Monday','Tuesdays','Wednesday','Thursday','Friday','Saturday']
     if (g === 'Male'){
-        return akanMale[theDay];
+        return [akanMale[theDay], dayOfWeek[theDay]];
     }
     else if ( g === 'Female'){
-        return akanFemale[theDay];
+        return [akanFemale[theDay], dayOfWeek[theDay]];
     }
 }
 
@@ -25,7 +26,7 @@ $(document).ready(function() {
         var d = parseInt($("#date").val());
         var g = $("input:radio[name=gender]:checked").val();
         var result = akanNames(y, m, d, g);
-         document.getElementById("post-akan-name").innerHTML="Your akan name is: " + result;
+         document.getElementById("post-akan-name").innerHTML="Your akan name is: " + result[0]+" born on "+ result[1];
 
          //confetti
         var duration = 15 * 1000;
