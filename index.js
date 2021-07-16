@@ -1,4 +1,5 @@
 
+//function to find akan names
 function akanNames(y, m, d, g){ 
     var dob = m + " " + d + ", " + y;
     var then = new Date(dob);
